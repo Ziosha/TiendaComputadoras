@@ -1,17 +1,40 @@
 import {Content} from './Content.js';
+import {Audifonos_page} from './View/Audifonos.js';
+import {Componentes_page} from './View/Componentes.js';
+import {Home_page} from './View/Home.js';
+import {Mouse_page} from './View/Mouse.js';
+import {Nosotros_page} from './View/Nosotros.js';
 
-let content = document.getElementById("content");
-let btn1 = document.getElementById("btnHome1");
-let btn2 = document.getElementById("btnAudifonos1")
+let content = document.getElementById("content"),
+    btnHomeNav1 = document.getElementById("btnHomeNav"),
+    btnAudifonosNav = document.getElementById("btnAudifonosNav"),
+    btnMousesNav = document.getElementById("btnMousesNav"),
+    btnComponentesNav = document.getElementById("btnComponentesNav"),
+    btnNosotrosNav = document.getElementById("btnNosotrosNav");
 
 
-btn1.addEventListener("click", function ()
+//render pages 
+btnHomeNav1.addEventListener("click", function ()
 {
-    content.innerHTML = `<h1>Pagina 1</h1>`;
+    content.innerHTML = Home_page();
 });
 
-
-btn2.addEventListener("click", function ()
+btnAudifonosNav.addEventListener("click", function ()
 {
-    content.innerHTML = `<h1>Pagina 2</h1>`;
+    content.innerHTML = Audifonos_page();
+});
+
+btnMousesNav.addEventListener("click", function ()
+{
+    content.innerHTML = Mouse_page();
+});
+
+btnComponentesNav.addEventListener("click", function ()
+{
+    content.innerHTML = Componentes_page();
+});
+
+btnNosotrosNav.addEventListener("click", function ()
+{
+    content.innerHTML = Nosotros_page();
 });
