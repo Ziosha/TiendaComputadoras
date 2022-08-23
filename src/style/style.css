@@ -253,3 +253,68 @@
   font-size: 14px;
   color: #878787;
 }
+
+/*   banner */
+
+.banner {
+  position: static;
+  width: 100%;
+  height: 500px;
+  border: 2px solid #000000;
+  background-size: 100% 100%;
+  margin: auto;
+  overflow: hidden;
+  animation: banner 10s infinite;
+  animation-direction: alternate;
+  z-index: 50;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 767px) {
+  .banner {
+    width: 400px;
+    height: 200px;
+    z-index: 50;
+  }
+}
+@keyframes banner {
+  0%,
+  30% {
+    background-image: url(https://tecnobits.net/wp-content/uploads/2018/03/mejores-impresoras-2018.jpg);
+    opacity: 1;
+  }
+  31%,
+  34% {
+    opacity: 0.5;
+  }
+  35%,
+  65% {
+    background-image: url(https://blog.soltekonline.com/content/images/2019/11/0-2.jpg);
+    opacity: 1;
+  }
+  66%,
+  69% {
+    opacity: 0.5;
+  }
+  70%,
+  100% {
+    background-image: url(https://icdn.dtcn.com/image/digitaltrends_es/mejores-computadoras-escritorio-dell-g5-gaming41-2-500x500.jpg);
+    opacity: 1;
+  }
+}
+
+header {
+  font-family: Helvetica;
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: white; 
+}
+
+.Name{
+  padding: 50px 20px;
+  background-color: rgba(0, 0, 0, 0.315)
+}
