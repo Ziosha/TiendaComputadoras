@@ -6,7 +6,7 @@
             $conexion = parent::Conexion();
             parent::set_names();
 
-            $sql = "SELECT * FROM productos";
+            $sql = "SELECT * FROM producto";
             $sql = $conexion -> prepare($sql);
             $sql -> execute();
 
@@ -20,7 +20,7 @@
             $conexion = parent::Conexion();
             parent::set_names();
 
-            $sql = "SELECT * FROM productos WHERE Id = ?";
+            $sql = "SELECT * FROM producto WHERE Id = ?";
             $sql = $conexion -> prepare($sql);
             $sql -> bindValue(1, $id);
             $sql -> execute();

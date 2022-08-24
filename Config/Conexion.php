@@ -7,7 +7,7 @@
         {
             try
             {
-                $conectar = $this -> dbc = new PDO("mysql:local=localhost; port=3306; dbname=apicomponents","root","123456");
+                $conectar = $this -> dbc = new PDO("mysql:local=localhost; port=3306; dbname=componentsbd","root","123456");
                 return $conectar;
             }
             catch(Exception $ex)
