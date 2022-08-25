@@ -6,15 +6,15 @@ import {Mouse_page} from './View/Mouse.js';
 import {Nosotros_page} from './View/Nosotros.js';
 
 // let content = document.getElementById("content"),
-//     btnHomeNav1 = document.getElementById("btnHomeNav"),
-//     btnAudifonosNav = document.getElementById("btnAudifonosNav"),
+    let btnHomeNav = document.getElementById("btnHomeNav"),
+        btnAudifonosNav = document.getElementById("btnAudifonosNav");
 //     btnMousesNav = document.getElementById("btnMousesNav"),
 //     btnComponentesNav = document.getElementById("btnComponentesNav"),
 //     btnNosotrosNav = document.getElementById("btnNosotrosNav");
 
 
 //render pages 
-btnHomeNav1.addEventListener("click", function ()
+btnHomeNav.addEventListener("click", function ()
 {
     Home_page();
 });
@@ -38,3 +38,5 @@ btnNosotrosNav.addEventListener("click", function ()
 {
     Nosotros_page();
 });
+
+Home_page();
