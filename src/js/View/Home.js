@@ -10,7 +10,15 @@ const Home_page = () =>
             <header>
                 <h1 class="Name">Bienvenidos a Yoshi-Tecno</h1>
             </header>
-        </div>  `;
+        </div>
+        <div class="cards-content">
+            <div class="shadow"><div class="card"></div></div>
+            <div class="shadow"><div class="card"></div></div>
+            <div class="shadow"><div class="card"></div></div>
+            <div class="shadow"><div class="card"></div></div>
+            <div class="shadow"><div class="card"></div></div>  
+        </div>
+        `;
      
 }
 
