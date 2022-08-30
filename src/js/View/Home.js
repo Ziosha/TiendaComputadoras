@@ -2,13 +2,16 @@ let content = document.getElementById("content"),
     procesador = document.getElementById("procesador"),
     memorias = document.getElementById("memorias"),
     audifonos = document.getElementById("audifonos"),
-    componentes = document.getElementById("componentes"),
-    root = document.getElementById("rooteo");
-
+    componentes = document.getElementById("componentes");
+    
 
 const Home_page = () =>
 {
-    
+
+    procesador.innerHTML = null;
+    memorias.innerHTML = null;
+    audifonos.innerHTML = null;
+    componentes.innerHTML = null;
 
     const render = (n, c) =>
     {
@@ -16,7 +19,7 @@ const Home_page = () =>
     }
 
     
-    const apiProd = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    const apiProd = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
     apiProd.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
@@ -26,7 +29,7 @@ const Home_page = () =>
             })
         ));
     
-    const apiMemorias = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    const apiMemorias = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
     apiMemorias.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
@@ -36,7 +39,7 @@ const Home_page = () =>
             })
         ));
 
-    const apiAudifonos = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    const apiAudifonos = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
     apiAudifonos.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
@@ -46,7 +49,7 @@ const Home_page = () =>
             })
         ));
 
-    const apiComponentes = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    const apiComponentes = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
     apiComponentes.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
