@@ -1,3 +1,7 @@
+body{
+  color: white !important;
+}
+
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
@@ -225,7 +229,6 @@
   font-size: 14px;
   color: #878787;
 }
-
 /*   banner */
 
 .banner {
