@@ -19,6 +19,11 @@
             $datos = $producto -> get_producto_id($body['Id']);
             echo json_encode($datos);
         break;
+
+        case "getProdHome":
+            $datos = $producto -> get_producto_home();
+            echo json_encode($datos);
+        break;
     }
          
 

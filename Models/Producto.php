@@ -29,6 +29,17 @@
             return $resultado;
         }
 
+        public function get_producto_home()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names(); 
+            $sql = "SELECT * FROM producto WHERE Idtipo = 1 LIMIT 5";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll(PDO::FETCH_ASSOC);
+            return $resultado;
+        }
         
 
         
