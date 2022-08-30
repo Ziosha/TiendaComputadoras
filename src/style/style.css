@@ -1,7 +1,16 @@
 body{
   color: white !important;
+  background-color: black;
+}
+.producto_card{
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
+.producto{
+  margin: 1em ;
+  text-align: center;
+}
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
@@ -294,6 +303,3 @@ header {
   background-color: rgba(0, 0, 0, 0.515)
 }
 
-p{
-  color: white;
-}

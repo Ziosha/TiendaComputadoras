@@ -1,9 +1,14 @@
-let content = document.getElementById("content");
-let procesador = document.getElementById("procesador");
+let content = document.getElementById("content"),
+    procesador = document.getElementById("procesador"),
+    memorias = document.getElementById("memorias"),
+    audifonos = document.getElementById("audifonos"),
+    componentes = document.getElementById("componentes"),
+    root = document.getElementById("rooteo");
+
 
 const Home_page = () =>
 {
-    content.innerHTML = null;
+    
 
     const render = (n, c) =>
     {
@@ -20,13 +25,43 @@ const Home_page = () =>
                 });
             })
         ));
+    
+    const apiMemorias = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    apiMemorias.then(resp => (resp.json()
+            .then(data => {
+                data.forEach(element => {
+                    const {Nombre, Caracteristicas} = element;
+                    memorias.innerHTML = memorias.innerHTML + render(Nombre, Caracteristicas);
+                });
+            })
+        ));
+
+    const apiAudifonos = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    apiAudifonos.then(resp => (resp.json()
+            .then(data => {
+                data.forEach(element => {
+                    const {Nombre, Caracteristicas} = element;
+                    audifonos.innerHTML = audifonos.innerHTML + render(Nombre, Caracteristicas);
+                });
+            })
+        ));
+
+    const apiComponentes = fetch("http://localhost/yoshi-tecno/controller/productoController.php?op=getProdHome")
+    apiComponentes.then(resp => (resp.json()
+            .then(data => {
+                data.forEach(element => {
+                    const {Nombre, Caracteristicas} = element;
+                    componentes.innerHTML = componentes.innerHTML + render(Nombre, Caracteristicas);
+                });
+            })
+        ));
         
        return content.innerHTML =  `
        <div class="banner">
-       <header>
-       <h1 class="Name">Bienvenidos a Yoshi-Tecno</h1>
-       </header>
-   </div>
+        <header>
+        <h1 class="Name">Bienvenidos a Yoshi-Tecno</h1>
+        </header>
+        </div>
         `;
      
 }
