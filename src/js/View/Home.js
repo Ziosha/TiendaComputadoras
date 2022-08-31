@@ -13,48 +13,48 @@ const Home_page = () =>
     audifonos.innerHTML = null;
     componentes.innerHTML = null;
 
-    const render = (n, c) =>
+    const render = (n, p, i) =>
     {
-        return `<div class="shadow"><div class="card"><p>${n}, ${c}</p></div></div>`;
+        return `<div class="shadow"><div class="card"><img src="http://localhost/tiendaComputadoras/src/images/${i}" width="150px" height="150px" alt=""><p> ${n}, Nombre : ${p}</p></div></div>`;
     }
 
     
-    const apiProd = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
+    const apiProd = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProcesador")
     apiProd.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Caracteristicas} = element;
-                    procesador.innerHTML = procesador.innerHTML + render(Nombre, Caracteristicas);
+                    const {Nombre, Precio, ImagenProducto} = element;
+                    procesador.innerHTML = procesador.innerHTML + render(Nombre, Precio, ImagenProducto);
                 });
             })
         ));
     
-    const apiMemorias = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
+    const apiMemorias = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getRam")
     apiMemorias.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Caracteristicas} = element;
-                    memorias.innerHTML = memorias.innerHTML + render(Nombre, Caracteristicas);
+                    const {Nombre, Precio, ImagenProducto} = element;
+                    memorias.innerHTML = memorias.innerHTML + render(Nombre, Precio, ImagenProducto);
                 });
             })
         ));
 
-    const apiAudifonos = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
+    const apiAudifonos = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getAudifono")
     apiAudifonos.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Caracteristicas} = element;
-                    audifonos.innerHTML = audifonos.innerHTML + render(Nombre, Caracteristicas);
+                    const {Nombre, Precio, ImagenProducto} = element;
+                    audifonos.innerHTML = audifonos.innerHTML + render(Nombre, Precio, ImagenProducto);
                 });
             })
         ));
 
-    const apiComponentes = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getProdHome")
+    const apiComponentes = fetch("http://localhost/TiendaComputadoras/controller/productoController.php?op=getTeclado")
     apiComponentes.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Caracteristicas} = element;
-                    componentes.innerHTML = componentes.innerHTML + render(Nombre, Caracteristicas);
+                    const {Nombre, Precio, ImagenProducto} = element;
+                    componentes.innerHTML = componentes.innerHTML + render(Nombre, Precio, ImagenProducto);
                 });
             })
         ));

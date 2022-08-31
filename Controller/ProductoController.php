@@ -20,8 +20,23 @@
             echo json_encode($datos);
         break;
 
-        case "getProdHome":
-            $datos = $producto -> get_producto_home();
+        case "getProcesador":
+            $datos = $producto -> get_producto_procesador();
+            echo json_encode($datos);
+        break;
+
+        case "getRam":
+            $datos = $producto -> get_producto_ram();
+            echo json_encode($datos);
+        break;
+
+        case "getAudifono":
+            $datos = $producto -> get_producto_audifonos();
+            echo json_encode($datos);
+        break;
+
+        case "getTeclado":
+            $datos = $producto -> get_producto_teclado();
             echo json_encode($datos);
         break;
     }

@@ -78,9 +78,9 @@ CREATE TABLE IF NOT EXISTS `producto` (
   KEY `FK_producto_proveedor` (`IdProveedor`),
   CONSTRAINT `FK_producto_proveedor` FOREIGN KEY (`IdProveedor`) REFERENCES `proveedor` (`Id`),
   CONSTRAINT `FK_producto_tipo` FOREIGN KEY (`IdTipo`) REFERENCES `tipo` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=176 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla componentsbd.producto: ~83 rows (aproximadamente)
+-- Volcando datos para la tabla componentsbd.producto: ~103 rows (aproximadamente)
 DELETE FROM `producto`;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
 INSERT INTO `producto` (`Id`, `IdTipo`, `IdProveedor`, `Nombre`, `Caracteristicas`, `ImagenProducto`, `Precio`, `Stock`, `CreationDate`, `CreationUserId`, `UpdateDate`, `UpdateUserId`, `DeleteDate`, `DeleteUserId`) VALUES
@@ -166,7 +166,27 @@ INSERT INTO `producto` (`Id`, `IdTipo`, `IdProveedor`, `Nombre`, `Caracteristica
 	(152, 3, 1, 'Seagate FireCuda', ' 500GB, 1, 2TB (3.5 y 2.5 pulgadas), 5200 y 7200 RPM', 'Seagate_FireCuda.jpg', 69, 10, '2022-08-31 00:15:40', 0, NULL, 0, NULL, 0),
 	(153, 3, 1, 'WD Blue', ' 500GB 1, 2, 3, 4, 6, 8TB (3.5 y 2.5 pulgadas),  7200 RPM', 'WD_Blue.jpg', 45, 10, '2022-08-31 00:17:05', 0, NULL, 0, NULL, 0),
 	(154, 3, 1, 'WD Black', ' 1, 2, 4, 6, 8 y 10TB (3.5 y 2.5 pulgadas),  7200 RPM', 'WD_Black.jpg', 60, 10, '2022-08-31 00:17:05', 0, NULL, 0, NULL, 0),
-	(155, 3, 1, 'WD Gold', ' 1, 2, 4, 5, 6, 8, 10, 12 y 14, 16, 18, 20 y 22TB (3.5 pulgadas),  7200 RPM', 'WD_Gold.jpg', 115, 10, '2022-08-31 00:17:05', 0, NULL, 0, NULL, 0);
+	(155, 3, 1, 'WD Gold', ' 1, 2, 4, 5, 6, 8, 10, 12 y 14, 16, 18, 20 y 22TB (3.5 pulgadas),  7200 RPM', 'WD_Gold.jpg', 115, 10, '2022-08-31 00:17:05', 0, NULL, 0, NULL, 0),
+	(156, 7, 1, 'Auricular Logitech H111', 'tiene Interfaz Mini Jack 3.5 mm con cable de 1,8 m', 'A1.jpg', 49, 30, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(157, 7, 1, 'Auricular Micronics H701 Platinum DJ', 'Auricular con Micrófono y estereo envolvente de alta calidad', 'A2.jpg', 88.9, 25, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(158, 7, 1, 'Auricular Gamer Halion S2 Dragon', 'Auricular Estéreo Gamer con Micrófono y Acabado Brillante + Detalles de Metal', 'A3.jpg', 139.99, 40, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(159, 7, 1, 'Auricular Xtech Ixion XTH541 Gaming', 'Máx potencia de salida de 50mW y Tipo de conexión: 3,5mm TRRS y USB para alimentación', 'A4.jpg', 100, 18, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(160, 7, 2, 'Auricular MICRONICS Lúdico HG801R', 'Sonido con vibracion e iliminacion LED Auricular Gamer con Micrófono.', 'A5.jpg', 249.99, 33, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(161, 7, 1, 'Auricular Antryx CS Thunder Silver 7.1', 'Iluminacion RGB y frecuencia de 20 Hz', 'A6.jpg', 220, 11, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(162, 7, 2, 'Auricular Logitech H390 USB', 'Respuesta de Frecuencia Auricular 20 Hz a 20 kHz y Micrófono 100 Hz a 10KHz', 'A7.jpg', 200, 5, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(163, 7, 2, 'Auricular Microsoft Lifechat LX 6000', 'Sonido estereofónico claro y Micrófono con cancelación de ruido', 'A8.jpg', 180, 9, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(164, 7, 1, 'Auricular Razer Electra V2 USB', 'Sonido con inmersión envolvente Micrófono flexible y extraíble', 'A9.jpg', 350, 50, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(165, 7, 1, 'AURICULARES LOGITECH G335', 'Conector de audio de 3,5 mm y Respuesta de frecuencia de Auricular es de 20 Hz-20 KHz', 'A10.jpg', 400, 35, '2022-08-31 11:52:35', 0, NULL, 0, NULL, 0),
+	(166, 8, 2, 'Teclado Logitech G513 Carbon Lightsync Gaming RGB Black', 'iluminacion LED RGB con diseño reposa manos desmontable', 'T1.jpg', 330, 37, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(167, 8, 2, 'Teclado Mecánico Gamer EVGA Z15 KAILH SPEED SILVER SWITCH', 'Interruptores de velocidad mecánicos Kailh y 4 LED indicadores', 'T2.jpg', 450, 9, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(168, 8, 2, 'Kit Teclado + Mouse Gamer Micronics Frantic', 'teclas curvas con iluminacion LED en teclado y raton ', 'A3.jpg', 300, 13, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(169, 8, 1, 'combo Teclado + Mouse basico ', 'Longitud de cable: Teclado: 1,5 m Mouse: 1,5 m', 'T4.jpg', 120, 55, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(170, 8, 1, 'KIT THUNDERWOLF 4 EN 1', 'Mouse gamer,Teclado gamer,Audífonos gamer y Mouse Pad todo con iluminacion LED ', 'T5.jpg', 550, 7, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(171, 8, 2, 'Mouse Logitech G502 Lightspeed Wireless Black', 'tiene Sensor HERO™ 25k e iluminacion RGB', 'T6.jpg', 170, 42, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(172, 8, 1, 'Mouse Gamer Logitech G203 Lightsync', 'La Resolución del sensor 8000 dpi y 6 botones', 'T7.jpg', 150, 31, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(173, 8, 1, 'Mouse Clutch GM41 Lightweight', 'interfaz USB 2.0 con Tiempo de respuesta: 100Hz / 1ms', 'T8.jpg', 300, 4, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(174, 8, 2, 'Mouse Gamer Micronics Winner M802 USB', 'Mouse Óptico Gamer RGB de 7 Botones con Iluminación LED RGB Running', 'T9.jpg', 159.99, 9, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0),
+	(175, 8, 1, 'Teclado basico', 'teclado basico para aprendizaje informatico', 'T10.jpg', 80, 60, '2022-08-31 11:55:28', 0, NULL, 0, NULL, 0);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 
 -- Volcando estructura para tabla componentsbd.proveedor
@@ -302,27 +322,27 @@ INSERT INTO `venta` (`Id`, `IdProducto`, `IdUsuario`, `FechaVenta`, `Cantidad`, 
 	(1, 1, 4, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
 	(2, 2, 4, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
 	(3, 3, 5, '2022-08-29 09:30:12', 3, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
-	(4, 4, 6, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(5, 5, 6, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(6, 6, 6, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(7, 7, 7, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(8, 8, 7, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(9, 9, 4, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(10, 10, 5, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(11, 11, 5, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(12, 12, 6, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(13, 13, 6, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(14, 14, 6, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(15, 15, 7, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(16, 16, 7, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(17, 17, 4, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(18, 18, 4, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(19, 19, 4, '2022-08-29 09:30:12', 3, NULL, 0, NULL, 0, NULL, 0),
-	(20, 20, 5, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(21, 21, 5, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0),
-	(22, 23, 5, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(23, 24, 6, '2022-08-29 09:30:12', 2, NULL, 0, NULL, 0, NULL, 0),
-	(24, 25, 7, '2022-08-29 09:30:12', 1, NULL, 0, NULL, 0, NULL, 0);
+	(4, 4, 6, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(5, 5, 6, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(6, 6, 6, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(7, 7, 7, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(8, 8, 7, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(9, 9, 4, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(10, 10, 5, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(11, 11, 5, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(12, 12, 6, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(13, 13, 6, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(14, 14, 6, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(15, 15, 7, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(16, 16, 7, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(17, 17, 4, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(18, 18, 4, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(19, 19, 4, '2022-08-29 09:30:12', 3, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(20, 20, 5, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(21, 21, 5, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(22, 23, 5, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(23, 24, 6, '2022-08-29 09:30:12', 2, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0),
+	(24, 25, 7, '2022-08-29 09:30:12', 1, '2022-08-29 09:30:12', 0, NULL, 0, NULL, 0);
 /*!40000 ALTER TABLE `venta` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
