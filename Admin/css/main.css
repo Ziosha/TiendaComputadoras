@@ -70,8 +70,8 @@ html, body{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-color: #fff;
-	background-image: url(../assets/img/fontLogin.jpg);
+	background-color: rgba(0, 0, 0, 0.5);
+	background-image: url(https://www.mastekhw.com/wp-content/uploads/2022/04/She-Gaming-busca-profesionalizar-los-videojuegos-en-Colombia.jpg);
 }
 .mdl-list__item-avatar{
 	line-height: 40px;
@@ -266,13 +266,13 @@ html, body{
 	height: auto;
 	margin: 0;
 	padding: 20px;
-	background-color: rgba(255,255,255,.9);
+	background-color: rgba(255, 255, 255, 0.719);
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 5px;
-	color: #3F51B5;
+	color: #0529ddc9;
 }
 /*=============Estilos barra superior*/
 .navBar{
