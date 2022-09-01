@@ -15,7 +15,7 @@ const Home_page = () =>
 
     const render = (n, p, i) =>
     {
-        return `<div class="shadow"><div class="card"><img src="http://localhost/tiendaComputadoras/src/images/${i}" width="150px" height="150px" alt=""><p> ${n}, Nombre : ${p}</p></div></div>`;
+        return `<div class="shadow"><div class="card"><img src="http://localhost/tiendaComputadoras/src/images/${i}" width="150px" height="150px" alt=""><br/><p> ${n}</p><p>Precio : ${p}$</p></div></div>`;
     }
 
     
@@ -60,10 +60,10 @@ const Home_page = () =>
         ));
         
        return content.innerHTML =  `
-       <div class="banner">
-        <header>
-        <h1 class="Name">Bienvenidos a Yoshi-Tecno</h1>
-        </header>
+        <div class="banner">
+            <header>
+                <h1 class="Name">Bienvenidos a Yoshi-Tecno</h1>
+            </header>
         </div>
         `;
      

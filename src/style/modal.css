@@ -1,0 +1,75 @@
+.form {
+    width: 35rem;
+    height: 25rem;
+    margin: 6% auto;
+    background-color: rgba(17, 16, 16, 0.774);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  .form1 {
+    width: 35rem;
+    height: 40rem;
+    margin: 6% auto;
+    background-color: rgba(17, 16, 16, 0.774);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  .form h1 {
+    font-size: 3rem;
+    margin-top: 0.6em;
+  }
+  .table {
+    margin-left: 3rem;
+  }
+  .table input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    color: white;
+    font-size: 1.36rem;
+    padding: 0.7rem 0;
+    outline: none;
+    border: none;
+    border-bottom: 0.1rem solid #fff;
+    background: transparent;
+    letter-spacing: 0.16rem;
+    color: white;
+  }
+  .table input[type="text"]:hover,
+  input[type="password"]:hover,
+  input[type="email"]:hover {
+    color: white;
+    border-bottom: 0.1rem solid rgb(4, 196, 148);
+  }
+
+  .table input[type="date"],
+  select {
+    background: transparent;
+    color: white;
+  }
+  .table input[type="submit"],
+  input[type="reset"] {
+    margin-top: 2em;
+    background: rgba(31, 17, 110, 0.65);
+    width: 14rem;
+    height: 3rem;
+    border: none;
+    color: white;
+  }
+  .table input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    color: black;
+    background-color: rgba(202, 201, 207, 0.74);
+  }
+
+  .sig{
+    color: white;
+    margin-top: 2em;
+  }
+
+  .sig a{
+    color: bisque;
+  }
