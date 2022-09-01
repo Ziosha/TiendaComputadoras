@@ -39,6 +39,16 @@
             $datos = $producto -> get_producto_teclado();
             echo json_encode($datos);
         break;
+
+        case "registerProducto":
+            $datos = $producto -> register_producto($body['IdTipo'],$body['IdProveedor'],$body['Nombre'],$body['Caracteristicas'],$body['Precio'],$body['Stock']);
+            echo json_encode($datos);
+        break;
+
+        case "updateProducto":
+            $datos = $producto -> update_producto($body['Precio'],$body['Stock'],$body['Id']);
+            echo json_encode($datos);
+        break;
     }
          
 

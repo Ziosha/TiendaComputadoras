@@ -22,7 +22,7 @@ document.getElementById('btlingre').addEventListener('click', function () {
         console.log(result.user.providerData[0].uid);
         console.log(result.user.providerData[0].photoURL);
 
-        $.post("../../controller/usuario.php?op=accesosocial",{correo:result.user.providerData[0].uid},function(data){
+        $.post("../../Controller/UsuarioController.php?op=accesosocial",{correo:result.user.providerData[0].uid},function(data){
             if(data==0){
                 $('#lblerror').hide();
                 $('#lblmensaje').hide();
@@ -55,7 +55,7 @@ $(document).on("click", "#btningresar", function () {
         $('#lblerror').hide();
         $('#lblregistro').hide();
     }else{
-        $.post("../../controller/usuario.php?op=acceso",{correo:correo,pass:pass},function(data){
+        $.post("../../Controller/UsuarioController.php?op=acceso",{correo:correo,pass:pass},function(data){
             if(data==0){
                 $('#lblerror').show();
                 $('#lblmensaje').hide();

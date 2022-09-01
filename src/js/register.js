@@ -19,7 +19,7 @@ document.getElementById('btlregis').addEventListener('click', function () {
         console.log(result.user.providerData[0].uid);
         console.log(result.user.providerData[0].photoURL);
 
-        $.post("../../controller/usuario.php?op=registro",{nomUsu:result.user.providerData[0].displayName,pass:123456,correo:result.user.providerData[0].uid},function(data){
+        $.post("../../Controller/UsuarioController.php?op=registro",{nomUsu:result.user.providerData[0].displayName,pass:123456,correo:result.user.providerData[0].uid},function(data){
             if(data==0){
                 Swal.fire({
                     icon: 'success',
@@ -68,7 +68,7 @@ $(document).on("click", "#btnregistrar", function () {
         );
     }else{
         if (pass==pass1){
-            $.post("../../controller/usuario.php?op=registro",{nomUsu:nomUsu,pass:pass,correo:correo},function(data){
+            $.post("../../Controller/UsuarioController.php?op=registro",{nomUsu:nomUsu,pass:pass,correo:correo},function(data){
                 if(data==0){
                     Swal.fire({
                         icon: 'success',
