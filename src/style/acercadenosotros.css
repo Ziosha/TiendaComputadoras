@@ -1,0 +1,86 @@
+
+body section .contenedor1 .imagen1{
+    float: right;
+    margin-top: -120px;
+    margin-right: 80px;
+    border-radius: 80px;
+    transition: 3s;
+} 
+body section .contenedor1 .imagen1:hover{
+    transform: translateX(30%);
+    filter: brightness(80%);
+}
+body section .contenedor1 .titulo1{
+    text-align:center;
+    font-size: 70px;
+}
+body section .contenedor1 .parrafo1{
+    margin-left: 80px;
+}
+    
+body section div .titulo2{
+    text-align: center;
+    margin-right: 600px;
+}
+body section div .parrafo2{
+    text-align: right;
+    margin-right: 200px;
+    margin-top: -200px;
+    
+}
+.foto2{
+    margin-right: 600px;
+    border-radius: 80px;
+    transition: 3s;
+}
+.foto2:hover{
+    transform: translateX(30%);
+    filter: brightness(80%);
+}
+body section .contenedor3 .titulo3{
+    text-align: right;
+    margin-right: 350px;
+}
+body section .contenedor3 .parrafo3{
+    margin-left: 180px;
+    margin-top: 70px;
+}
+body section .contenedor3 .imagen3{
+    float: right;
+    margin-top: -120px;
+    margin-right: 180px;
+    border-radius: 80px;
+    transition: 3s;
+}
+body section .contenedor3 .imagen3:hover{
+    transform: translate(100px);
+    filter: brightness(80%);
+}
+footer div .footer{
+    margin-top: 150px;
+    text-align: center;
+}
+.img11{
+    transition: 1s;
+}
+.img11:hover{
+    transform: translateX(30%);
+    width: 100px;
+    filter: brightness(80%);
+}
+.img12{
+    transition: 1s;
+}
+.img12:hover{
+    transform: translateX(30%);
+    width: 100px;
+    filter: brightness(80%);
+}
+.img13{
+    transition: 1s;
+}
+.img13:hover{
+    transform: translateX(30%);
+    width: 100px;
+    filter: brightness(80%);
+}
