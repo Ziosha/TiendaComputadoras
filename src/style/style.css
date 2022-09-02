@@ -125,7 +125,18 @@ body{
 }
 .footer-content {
   position: relative;
-  z-index: 2;
+  
+  /*z-index: 2;*/
+}
+
+#pri{
+  width: 30em;
+}
+.re-footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
 .footer-pattern img {
   position: absolute;
@@ -141,6 +152,7 @@ body{
 .footer-logo img {
     max-width: 200px;
 }
+
 .footer-text p {
   margin-bottom: 14px;
   font-size: 14px;
