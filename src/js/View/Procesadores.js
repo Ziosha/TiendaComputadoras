@@ -1,5 +1,6 @@
 
-let audifonos = document.getElementById("audifonos");
+
+let procesador = document.getElementById("procesador");
 
 
 const render = (n, p, i) =>
@@ -8,7 +9,7 @@ const render = (n, p, i) =>
 }
 
 
-var data = {Tipo: 7};
+var data = {Tipo: 1};
         
         const apiLogin = fetch("http://localhost/tiendaComputadoras/Controller/ProductoController.php?op=getAllTipo", {
            method: 'POST', 
@@ -20,7 +21,7 @@ var data = {Tipo: 7};
          .then(response => {
             response.forEach(element => {
                 const {Nombre, Precio, ImagenProducto} = element;
-                audifonos.innerHTML = audifonos.innerHTML + render(Nombre, Precio, ImagenProducto);
+                procesador.innerHTML = procesador.innerHTML + render(Nombre, Precio, ImagenProducto);
             });
             
          });  

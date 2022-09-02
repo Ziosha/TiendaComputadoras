@@ -15,6 +15,21 @@
             return $resultado;
         }
 
+        public function get_producto_tipe($tipo)
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT * FROM producto WHERE Idtipo = ?";
+            $sql = $conexion -> prepare($sql);
+            $sql -> bindValue(1, $tipo);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll(PDO::FETCH_ASSOC);
+
+            return $resultado;
+        }
+
         public function get_producto_id($id)
         {
             $conexion = parent::Conexion();

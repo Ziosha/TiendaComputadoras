@@ -15,6 +15,11 @@
             echo json_encode($datos);
         break;
 
+        case "getAllTipo":
+            $datos = $producto -> get_producto_tipe($body['Tipo']);
+            echo json_encode($datos);
+        break;
+
         case "getId":
             $datos = $producto -> get_producto_id($body['Id']);
             echo json_encode($datos);
