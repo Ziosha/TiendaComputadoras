@@ -32,16 +32,26 @@
           </div>
       </div>
     
-   
+      <div class="alert alert-danger" role="alert" id="lblmensaje">
+      <strong class="d-block d-sm-inline-block-force">Error!</strong> Campos vacios.
+      </div>
+
+      <div class="alert alert-warning" role="alert" id="lblerror">
+      <strong class="d-block d-sm-inline-block-force">Advertencia!</strong> Verificar Credenciales.
+      </div>
+
+      <div class="alert alert-warning" role="alert" id="lblregistro">
+      <strong class="d-block d-sm-inline-block-force">Error!</strong> No Registrado.
+      </div>
       <div class="form">
         <h1 style="text-align: center">Login</h1>
-        <form class="table">
-          <input type="text" name="usuario" placeholder="Usuario" size="40" required/>
-          <input type="password" name="pass" placeholder="Contraseña" size="40" required/>
-          <input type="submit" value="Ingresar" />
-          <input type="submit" value="Ingresar con Google" />
+        <div class="table">
+          <input type="text" id="txtcorreo" name="txtcorreo" placeholder="Usuario O Email" size="40" required/>
+          <input type="password" id="txtpass" name="txtpass" placeholder="Contraseña" size="40" required/>
+          <input type="submit" id="btningresar" value="Ingresar" />
+          <input type="submit" id="btlingre" value="Ingresar con Google" />
           <p class="sig">No Tienes Cuenta Registrate <a href="signin.html"> aqui </a></p>
-        </form>
+        </div>
         </div>
     <!----------------- Content ------------------->
   
@@ -158,12 +168,10 @@
             </div>
         </div>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
-  <script src="../../public/js/register.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="../../js/index.js"></script>    
 </body>
   </html>

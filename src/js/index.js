@@ -16,19 +16,14 @@ document.getElementById('btlingre').addEventListener('click', function () {
     var provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider)
     .then(function (result) {
-        var user = result.user;
-        console.log(user);
-        console.log(result.user.providerData[0].displayName);
-        console.log(result.user.providerData[0].uid);
-        console.log(result.user.providerData[0].photoURL);
 
-        $.post("../../Controller/UsuarioController.php?op=accesosocial",{correo:result.user.providerData[0].uid},function(data){
+        $.post('http://localhost/tiendaComputadoras/Controller/UsuarioController.php?op=accesosocial',{correo:result.user.providerData[0].uid},function(data){
             if(data==0){
                 $('#lblerror').hide();
                 $('#lblmensaje').hide();
                 $('#lblregistro').show();
             }else{
-                window.open('../../index.php','_self');
+                window.open('../../index.html','_self');
             }
         });
     }).catch(function (error) {
@@ -55,12 +50,12 @@ $(document).on("click", "#btningresar", function () {
         $('#lblerror').hide();
         $('#lblregistro').hide();
     }else{
-        $.post("../../Controller/UsuarioController.php?op=acceso",{correo:correo,pass:pass},function(data){
+        $.post('../../Controller/UsuarioController.php?op=acceso',{correo:correo, pass:pass},function(data){
             if(data==0){
                 $('#lblerror').show();
                 $('#lblmensaje').hide();
             }else{
-                window.open('../../index.php','_self');
+                window.open('../../index.html','_self');
             }
         });
     }

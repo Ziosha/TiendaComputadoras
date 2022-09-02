@@ -22,12 +22,12 @@
 	<section class="full-width container-notifications">
 		<div class="full-width container-notifications-bg btn-Notification"></div>
 	    <section class="NotificationArea">
-	        <div class="full-width text-center NotificationArea-title tittles">Notificaciones <i class="zmdi zmdi-close btn-Notification"></i></div>
+			<div class="full-width text-center NotificationArea-title tittles">Notificaciones <i class="zmdi zmdi-close btn-Notification"></i></div>
 	        <a href="#" class="Notification" id="notifation-unread-1">
-	            <div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
+				<div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
 	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle"></i>
+					<p>
+						<i class="zmdi zmdi-circle"></i>
 	                    <strong>Nuevo Usuario Registrado</strong> 
 	                    <br>
 	                    <small>Justo Ahora</small>
@@ -36,10 +36,10 @@
 	        	<div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-1">Notification as UnRead</div> 
 	        </a>
 	        <a href="#" class="Notification" id="notifation-read-1">
-	            <div class="Notification-icon"><i class="zmdi zmdi-cloud-download bg-primary"></i></div>
+				<div class="Notification-icon"><i class="zmdi zmdi-cloud-download bg-primary"></i></div>
 	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle-o"></i>
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
 	                    <strong>Nuevas Datos</strong> 
 	                    <br>
 	                    <small>Hace 30 Mins </small>
@@ -48,10 +48,10 @@
 	            <div class="mdl-tooltip mdl-tooltip--left" for="notifation-read-1">Notification sin leer</div>
 	        </a>
 	        <a href="#" class="Notification" id="notifation-unread-2">
-	            <div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
+				<div class="Notification-icon"><i class="zmdi zmdi-upload bg-success"></i></div>
 	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle"></i>
+					<p>
+						<i class="zmdi zmdi-circle"></i>
 	                    <strong>Archivo Actualizado</strong> 
 	                    <br>
 	                    <small>Hace 31 Mins</small>
@@ -60,10 +60,10 @@
 	            <div class="mdl-tooltip mdl-tooltip--left" for="notifation-unread-2">Notification sin leer</div>
 	        </a> 
 	        <a href="#" class="Notification" id="notifation-read-2">
-	            <div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
+				<div class="Notification-icon"><i class="zmdi zmdi-mail-send bg-danger"></i></div>
 	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle-o"></i>
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
 	                    <strong>Nuevo Email</strong> 
 	                    <br>
 	                    <small>Hace 37 Mins</small>
@@ -74,8 +74,8 @@
 	        <a href="#" class="Notification" id="notifation-read-3">
 	            <div class="Notification-icon"><i class="zmdi zmdi-folder bg-primary"></i></div>
 	            <div class="Notification-text">
-	                <p>
-	                    <i class="zmdi zmdi-circle-o"></i>
+					<p>
+						<i class="zmdi zmdi-circle-o"></i>
 	                    <strong>Folder delete</strong> 
 	                    <br>
 	                    <small>1 hours Ago</small>
@@ -163,16 +163,6 @@
 									</div>
 									<div class="navLateral-body-cr hide-on-tablet">
 										PROVEEDORES
-									</div>
-								</a>
-							</li>
-							<li class="full-width">
-								<a href="payments.html" class="full-width">
-									<div class="navLateral-body-cl">
-										<i class="zmdi zmdi-card"></i>
-									</div>
-									<div class="navLateral-body-cr hide-on-tablet">
-										PAGOS
 									</div>
 								</a>
 							</li>
@@ -296,13 +286,13 @@
 	<!-- pageContent -->
 	<section class="full-width pageContent">
 		<section class="full-width text-center" style="padding: 40px 0;">
-			<h3 class="text-center tittles">RESPONSIVE TILES</h3>
+			<h3 class="text-center tittles">RESUMEN</h3>
 			<!-- Tiles -->
 			<article class="full-width tile">
 				<div class="tile-text">
 					<span class="text-condensedLight">
-						2<br>
-						<small>Administrators</small>
+						<span id="administradores">2</span> <br><br>
+						<small>Administradores</small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-account tile-icon"></i>
@@ -310,8 +300,8 @@
 			<article class="full-width tile">
 				<div class="tile-text">
 					<span class="text-condensedLight">
-						71<br>
-						<small>Clients</small>
+						<span id="clientes">12</span><br><br>
+						<small>Clientes</small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-accounts tile-icon"></i>
@@ -319,8 +309,8 @@
 			<article class="full-width tile">
 				<div class="tile-text">
 					<span class="text-condensedLight">
-						7<br>
-						<small>Providers</small>
+						<span id="proveedores">14</span><br><br>
+						<small>Proveedores</small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-truck tile-icon"></i>
@@ -328,8 +318,8 @@
 			<article class="full-width tile">
 				<div class="tile-text">
 					<span class="text-condensedLight">
-						9<br>
-						<small>Categories</small>
+						<span id="categorias">4</span><br><br>
+						<small>Categorias</small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-label tile-icon"></i>
@@ -337,8 +327,8 @@
 			<article class="full-width tile">
 				<div class="tile-text">
 					<span class="text-condensedLight">
-						121<br>
-						<small>Products</small>
+						<span id="productos">13</span><br><br>
+						<small>Productos</small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-washing-machine tile-icon"></i>
@@ -346,67 +336,14 @@
 			<article class="full-width tile">
 				<div class="tile-text">
 					<span class="text-condensedLight">
-						47<br>
-						<small>Sales</small>
+						<span id="ventas">15</span><br><br>
+						<small>Ventas</small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-shopping-cart tile-icon"></i>
 			</article>
 		</section>
-		<section class="full-width" style="margin: 30px 0;">
-			<h3 class="text-center tittles">RESPONSIVE TIMELINE</h3>
-			<!-- TimeLine -->
-			<div id="timeline-c" class="timeline-c">
-				<div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-info">
-	                    <i class="zmdi zmdi-twitter"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>05-04-2016</span>
-	                </div>
-	            </div>
-				<div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-success">
-	                    <i class="zmdi zmdi-whatsapp"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>06-04-2016</span>
-	                </div>
-	            </div>
-	            <div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-primary">
-	                    <i class="zmdi zmdi-facebook"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>07-04-2016</span>
-	                </div>
-	            </div>
-	            <div class="timeline-c-box">
-	                <div class="timeline-c-box-icon bg-danger">
-	                    <i class="zmdi zmdi-youtube"></i>
-	                </div>
-	                <div class="timeline-c-box-content">
-	                    <h4 class="text-center text-condensedLight">Tittle timeline</h4>
-	                    <p class="text-center">
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nobis rerum iure nostrum dolor. Quo totam possimus, ex, sapiente rerum vel maxime fugiat, ipsam blanditiis veniam, suscipit labore excepturi veritatis.
-	                    </p>
-	                    <span class="timeline-date"><i class="zmdi zmdi-calendar-note zmdi-hc-fw"></i>08-04-2016</span>
-	                </div>
-	            </div>
-			</div>
-		</section>
 	</section>
+	<script src="js/script/Home.js"></script>
 </body>
 </html>

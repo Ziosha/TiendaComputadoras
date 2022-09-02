@@ -42,11 +42,46 @@
 
         case "registerProducto":
             $datos = $producto -> register_producto($body['IdTipo'],$body['IdProveedor'],$body['Nombre'],$body['Caracteristicas'],$body['Precio'],$body['Stock']);
-            echo json_encode($datos);
+            if(is_array($datos) == true and count($datos) > 0){
+                echo "1";
+            }else{
+                echo "0";
+            }
+            break;
         break;
 
         case "updateProducto":
             $datos = $producto -> update_producto($body['Precio'],$body['Stock'],$body['Id']);
+            echo json_encode($datos);
+        break;
+
+        case "countAdmin":
+            $datos = $producto -> cantidad_administrador();
+            echo json_encode($datos);
+        break;
+
+        case "countCliente":
+            $datos = $producto -> cantidad_cliente();
+            echo json_encode($datos);
+        break;
+
+        case "countProveedor":
+            $datos = $producto -> cantidad_proveedor();
+            echo json_encode($datos);
+        break;
+
+        case "countCategoria":
+            $datos = $producto -> cantidad_categoria();
+            echo json_encode($datos);
+        break;
+
+        case "countProducto":
+            $datos = $producto -> cantidad_producto();
+            echo json_encode($datos);
+        break;
+
+        case "countVenta":
+            $datos = $producto -> cantidad_venta();
             echo json_encode($datos);
         break;
     }

@@ -112,6 +112,82 @@
             return $resultado;
         }
 
+        public function cantidad_producto()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT COUNT(*) AS cantidad FROM producto";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll();
+            return $resultado;
+        }
+
+        public function cantidad_proveedor()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT COUNT(*) AS cantidad FROM proveedor";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll();
+            return $resultado;
+        }
+
+        public function cantidad_cliente()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT COUNT(*) AS cantidad FROM usuario WHERE IdRol = 2";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll();
+            return $resultado;
+        }
+
+        public function cantidad_venta()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT COUNT(*) AS cantidad FROM venta";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll();
+            return $resultado;
+        }
         
+        public function cantidad_categoria()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT COUNT(*) AS cantidad FROM tipo";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll();
+            return $resultado;
+        }
+
+        public function cantidad_administrador()
+        {
+            $conexion = parent::Conexion();
+            parent::set_names();
+
+            $sql = "SELECT COUNT(*) AS cantidad FROM usuario WHERE IdRol = 1";
+            $sql = $conexion -> prepare($sql);
+            $sql -> execute();
+
+            $resultado = $sql -> fetchAll();
+            return $resultado;
+        }
     }
 ?>
