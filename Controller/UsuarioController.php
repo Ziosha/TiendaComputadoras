@@ -63,6 +63,15 @@
                 echo "0";
             }
         break;
+
+        case "getAdmin":
+            $datos = $usuario -> get_admin();
+            echo json_encode($datos);
+        break;
         
+        case "getClient":
+            $datos = $usuario -> get_client();
+            echo json_encode($datos);
+        break;
     }
 ?>

@@ -110,5 +110,27 @@
             
             return $resultado=$sql->fetchAll();
         }
+
+        public function get_admin(){
+            $conectar = parent::conexion();
+            parent::set_names();
+
+            $sql = "SELECT * from usuario WHERE IdRol = 1";
+            $sql = $conectar -> prepare($sql);
+            $sql -> execute();
+
+            return $resultado=$sql->fetchAll();
+        }
+
+        public function get_client(){
+            $conectar = parent::conexion();
+            parent::set_names();
+
+            $sql = "SELECT * from usuario WHERE IdRol = 2";
+            $sql = $conectar -> prepare($sql);
+            $sql -> execute();
+
+            return $resultado=$sql->fetchAll();
+        }
     }
 ?>

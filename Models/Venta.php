@@ -6,7 +6,7 @@
             $conexion = parent::Conexion();
             parent::set_names();
 
-            $sql = "SELECT * FROM venta";
+            $sql = "SELECT v.*, u.Nombre, p.Precio  FROM venta v , usuario u , producto p WHERE u.Id  = v.IdUsuario AND v.IdProducto = p.Id ";
             $sql = $conexion -> prepare($sql);
             $sql -> execute();
 

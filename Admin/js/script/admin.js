@@ -32,3 +32,26 @@ let ci = document.getElementById("DNIAdmin"),
             }
          });    
     });
+
+    let table = document.getElementById("render");
+
+    const render = (f,c,) => {
+        return `<div class="mdl-list__item mdl-list__item--two-line">
+        <span class="mdl-list__item-primary-content">
+          <i class="zmdi zmdi-account mdl-list__item-avatar"></i>
+          <span>Nombre Administrador: ${f} name</span>
+          <span class="mdl-list__item-sub-title">CI: ${c}</span>
+        </span>
+        <a class="mdl-list__item-secondary-action" href="#!"><i class="zmdi zmdi-more"></i></a>
+      </div>`
+    }
+    
+     const countAdmin = fetch("http://localhost/tiendaComputadoras/Controller/UsuarioController.php?op=getAdmin")
+     countAdmin.then(resp => (resp.json()
+                .then(data => {
+                    data.forEach(element => {
+                        const{Nombre, Ci} = element
+                    table.innerHTML = table.innerHTML + render(Nombre, Ci);
+                    });
+                })
+            ));
