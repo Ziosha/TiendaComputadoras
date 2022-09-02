@@ -33,13 +33,13 @@
 
             $conectar = parent::conexion();
             parent::set_names();
-
-            $sql = "INSERT INTO `usuarios` (id, Username, Password, Correo, estado) VALUES (NULL,?,?,?,'1');";
+            
+            $sql = 'INSERT INTO `usuario` (Id,IdRol ,Nombre,Ci, Telefono, Direccion, Username,Password, Correo, CreationDate) VALUES (NULL,2,"asdasd",0123,0123,"asdasd",?,AES_ENCRYPT(?,"keySecret"),?,now());';
             
             $sql = $conectar -> prepare($sql);
             $sql -> bindValue(1, $nomUsu);
-            $sql -> bindValue(2, $correo);
-            $sql -> bindValue(3, $pass);
+            $sql -> bindValue(2, $pass);
+            $sql -> bindValue(3, $correo);
             $sql -> execute();
 
             return $resultado=$sql->fetchAll();
@@ -50,7 +50,7 @@
             $conectar = parent::conexion();
             parent::set_names();
             
-            $sql = "SELECT * FROM `usuarios` WHERE correo = ? AND estado='1'";
+            $sql = "SELECT * FROM `usuarios` WHERE correo = ?";
             $sql = $conectar -> prepare($sql);
             $sql -> bindValue(1, $correo);
             $sql -> execute();

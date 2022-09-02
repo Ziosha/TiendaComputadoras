@@ -17,15 +17,30 @@ document.getElementById('btlingre').addEventListener('click', function () {
     auth.signInWithPopup(provider)
     .then(function (result) {
 
-        $.post('http://localhost/tiendaComputadoras/Controller/UsuarioController.php?op=accesosocial',{correo:result.user.providerData[0].uid},function(data){
-            if(data==0){
+
+
+        var data = {Correo: result.user.providerData[0].uid};
+
+        const apiLogin = fetch("http://localhost/tiendaComputadoras/Controller/UsuarioController.php?op=accesosocial", {
+        method: 'POST', 
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers:{
+            'Content-Type': 'application/json'
+        }
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            if(response == 1)
+            {
+                alert("Bienvenido");
+                window.open('http://localhost/tiendaComputadoras/index.html','_self');
+            }
+            else{
                 $('#lblerror').hide();
                 $('#lblmensaje').hide();
                 $('#lblregistro').show();
-            }else{
-                window.open('../../index.html','_self');
             }
-        });
+        });  
     }).catch(function (error) {
         console.log(error);
     });
@@ -50,14 +65,28 @@ $(document).on("click", "#btningresar", function () {
         $('#lblerror').hide();
         $('#lblregistro').hide();
     }else{
-        $.post('../../Controller/UsuarioController.php?op=acceso',{correo:correo, pass:pass},function(data){
-            if(data==0){
+
+        var data = {Correo: correo, Pass: pass};
+
+        const apiLogin = fetch("http://localhost/tiendaComputadoras/Controller/UsuarioController.php?op=accesoAdmin", {
+        method: 'POST', 
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers:{
+            'Content-Type': 'application/json'
+        }
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            if(response == 1)
+            {
+                alert("Bienvenido");
+                window.open('http://localhost/tiendaComputadoras/index.html','_self');
+            }
+            else{
                 $('#lblerror').show();
                 $('#lblmensaje').hide();
-            }else{
-                window.open('../../index.html','_self');
             }
-        });
+        });    
     }
  });
 

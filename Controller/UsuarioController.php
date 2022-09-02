@@ -19,7 +19,7 @@
             break;
 
         case "accesosocial":
-            $datos = $usuario -> get_login_social($_POST["correo"]);
+            $datos = $usuario -> get_login_social($body["correo"]);
             if(is_array($datos) == true and count($datos) > 0){
                 echo "1";
             }else{
@@ -28,11 +28,11 @@
             break;
 
         case "registro":
-            $datos = $usuario -> get_correo($_POST["correo"]);
+            $datos = $usuario -> get_correo($body["correo"]);
             if(is_array($datos) == true and count($datos) > 0){
                echo "1";
             }else{
-                $usuario -> register_usuario($_POST["nomUsu"],$_POST["correo"],$_POST["pass"]);
+                $usuario -> register_usuario($body["nomUsu"],$body["pass"],$body["correo"]);
                 echo "0";
             }
             break;

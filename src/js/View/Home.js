@@ -13,9 +13,12 @@ const Home_page = () =>
     audifonos.innerHTML = null;
     componentes.innerHTML = null;
 
-    const render = (n, p, i) =>
+    
+
+    const render = (n, p, i, id) =>
     {
-        return `<div class="shadow"><div class="card"><img src="http://localhost/tiendaComputadoras/src/images/${i}" width="150px" height="150px" alt=""><br/><p> ${n}</p><p>Precio : ${p}$</p></div></div>`;
+        
+        return `<div class="shadow"><div class="card"><img src="http://localhost/tiendaComputadoras/src/images/${i}" width="150px" height="150px" alt=""><br/><p> ${n}</p><p>Precio : ${p}$</p><button onclick="sale(${id})">Comprar</button></div></div>`;
     }
 
     
@@ -23,8 +26,8 @@ const Home_page = () =>
     apiProd.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Precio, ImagenProducto} = element;
-                    procesador.innerHTML = procesador.innerHTML + render(Nombre, Precio, ImagenProducto);
+                    const {Nombre, Precio, ImagenProducto, Id} = element;
+                    procesador.innerHTML = procesador.innerHTML + render(Nombre, Precio, ImagenProducto, Id);
                 });
             })
         ));
@@ -33,8 +36,8 @@ const Home_page = () =>
     apiMemorias.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Precio, ImagenProducto} = element;
-                    memorias.innerHTML = memorias.innerHTML + render(Nombre, Precio, ImagenProducto);
+                    const {Nombre, Precio, ImagenProducto, Id} = element;
+                    memorias.innerHTML = memorias.innerHTML + render(Nombre, Precio, ImagenProducto, Id);
                 });
             })
         ));
@@ -43,8 +46,8 @@ const Home_page = () =>
     apiAudifonos.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Precio, ImagenProducto} = element;
-                    audifonos.innerHTML = audifonos.innerHTML + render(Nombre, Precio, ImagenProducto);
+                    const {Nombre, Precio, ImagenProducto, Id} = element;
+                    audifonos.innerHTML = audifonos.innerHTML + render(Nombre, Precio, ImagenProducto, Id);
                 });
             })
         ));
@@ -53,8 +56,8 @@ const Home_page = () =>
     apiComponentes.then(resp => (resp.json()
             .then(data => {
                 data.forEach(element => {
-                    const {Nombre, Precio, ImagenProducto} = element;
-                    componentes.innerHTML = componentes.innerHTML + render(Nombre, Precio, ImagenProducto);
+                    const {Nombre, Precio, ImagenProducto, Id} = element;
+                    componentes.innerHTML = componentes.innerHTML + render(Nombre, Precio, ImagenProducto, Id);
                 });
             })
         ));
